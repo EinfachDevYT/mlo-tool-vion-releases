@@ -50,6 +50,9 @@ Das MLO wird an einer festen Stelle der Karte platziert. Such dir eine **freie, 
 
 Notiere dir **X, Y, Z** – Z ist die Bodenhöhe. Den Wert trägst du in Schritt 11 ein.
 
+> Am besten eignen sich **Asphalt- oder Betonflächen**. Auf Wiese wächst das Gras der Karte sonst durch
+> deinen Fußboden. Trage Z dann **0,1–0,2 m höher** als die Bodenhöhe ein.
+
 ---
 
 ## 3. Das Erdgeschoss aufziehen
@@ -136,6 +139,17 @@ Eigene Texturen: **Importieren** oder PNG/JPG-Dateien direkt in den Browser zieh
 
 Rechts kannst du Breite, Höhe und Richtung ändern.
 
+### Geländer
+
+- **An der Treppe:** Treppe auswählen → rechts unter **Geländer** „Beide Seiten“, „Nur links“,
+  „Nur rechts“ oder „Kein Geländer“. Läuft die Treppe an einer Wand entlang, reicht eine Seite.
+  Der Handlauf steigt mit der Treppe mit.
+- **Rund um das Treppenloch oben:** Ebene auf **3 m** (Bild↑), Werkzeug **Geländer (L)**, vom Anfang zum
+  Ende ziehen. Mit gedrückter **Umschalt**-Taste rastet es auf 45°-Schritte ein. Pro Seite des Lochs
+  ein Geländer ziehen – die Seite, an der man oben ankommt, frei lassen.
+
+Geländer haben eine unsichtbare Kollision bis zum Handlauf, man kann also nicht hindurchfallen.
+
 ---
 
 ## 8. Decken und Dach
@@ -207,6 +221,8 @@ Der Export warnt dich vorher, z. B. wenn ein Raum keine Verbindung hat.
 | Man fällt durch den Boden | Die `name_col.ybn` fehlt in `stream`, oder die Z-Koordinate liegt unter dem Gelände. |
 | Alles weiß ohne Texturen | Alte Export-Version – mit der aktuellen Version neu exportieren (Texturen sind jetzt eingebettet). |
 | Gebäude steckt im Boden / schwebt | Z-Koordinate der Weltposition anpassen. |
+| Gras wächst durch den Fußboden | Z der Weltposition 0,1–0,2 m höher setzen oder auf Asphalt/Beton bauen. |
+| Graue Leere um die Figur, Tür steht neben dem Haus | Teile wurden einzeln verschoben (alte Version: Außenhülle separat). Position **nur im Tool** ändern und neu exportieren – seit 1.1.2 ist die Außenhülle Teil des MLO und bewegt sich immer mit. |
 | Änderungen kommen nicht an | FiveM-Cache leeren (`%localappdata%\FiveM\FiveM.app\data\cache`) und Server neu starten. |
 | Tür passt nicht in die Öffnung | Breite der Öffnung an die Tür anpassen oder anderes Tür-Modell wählen. |
 
