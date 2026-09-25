@@ -176,12 +176,33 @@ und vergleiche im Spiel.
 
 ---
 
-## 11. Weltposition
+## 11. Im Spiel platzieren (empfohlen)
 
-Nichts ausgewählt → rechts **Position in der GTA-Welt**: die Koordinaten aus Schritt 2 eintragen.
-**Drehung** dreht das ganze Gebäude um die Hochachse.
+Du musst das MLO **nicht** in CodeWalker verschieben – das verursacht Fehler (Teile an verschiedenen Stellen,
+Abstürze). Stattdessen platzierst du es direkt im Spiel:
 
----
+1. Einmal exportieren (Schritt 12) und die Ressource auf dem Server starten. Ohne Position wird das
+   MLO noch nicht in die Welt gesetzt – das ist Absicht.
+2. Im Spiel zum Bauplatz gehen und **`/mloplace_<name>`** eingeben (z. B. `/mloplace_mein_mlo`).
+   Das Gebäude erscheint halbtransparent vor dir.
+3. Platzieren:
+
+   | Taste | Funktion |
+   |---|---|
+   | Pfeiltasten | verschieben (in Blickrichtung der Kamera) |
+   | Bild↑ / Bild↓ | Höhe |
+   | Q / E | drehen |
+   | G | auf den Boden setzen (+10 cm, damit kein Gras durchwächst) |
+   | Umschalt / Strg | schnell / fein |
+   | Enter / Rücktaste | übernehmen / abbrechen |
+
+4. Nach **Enter** steht ein Code wie `VIONPOS:…` im Chat und in der Zwischenablage. Er enthält auch die
+   **gemessenen Maße deiner Türmodelle**.
+5. Im Tool (nichts ausgewählt) → **„Position aus Spiel einfügen…“** → Strg+V → Übernehmen.
+   Position und Türöffnungen werden übernommen – die Türen passen danach exakt in den Rahmen.
+6. **Neu exportieren**, Ressource ersetzen, FiveM-Cache leeren, fertig.
+
+Die Werte stehen auch rechts unter **Position in der GTA-Welt** und lassen sich dort von Hand ändern.
 
 ## 12. Exportieren
 
@@ -224,7 +245,7 @@ Der Export warnt dich vorher, z. B. wenn ein Raum keine Verbindung hat.
 | Gras wächst durch den Fußboden | Z der Weltposition 0,1–0,2 m höher setzen oder auf Asphalt/Beton bauen. |
 | Graue Leere um die Figur, Tür steht neben dem Haus | Teile wurden einzeln verschoben (alte Version: Außenhülle separat). Position **nur im Tool** ändern und neu exportieren – seit 1.1.2 ist die Außenhülle Teil des MLO und bewegt sich immer mit. |
 | Änderungen kommen nicht an | FiveM-Cache leeren (`%localappdata%\FiveM\FiveM.app\data\cache`) und Server neu starten. |
-| Tür passt nicht in die Öffnung | Breite der Öffnung an die Tür anpassen oder anderes Tür-Modell wählen. |
+| Tür passt nicht in die Öffnung / hängt im Boden | Mit `/mloplace_<name>` platzieren und den Code einfügen – dabei werden die echten Türmaße gemessen. |
 
 ## Grenzen der aktuellen Version
 
